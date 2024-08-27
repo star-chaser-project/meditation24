@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://use.typekit.net/dct7nmr.css");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--<link rel="stylesheet" href="gsap.registerPlugin(ScrollTrigger)" /> -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.html" />
+    <title>Meditation: A journey of discovery</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <sl-tooltip content="Start meditating now (00:46)"><sl-button type="button" onclick="togglePlay()">Play</sl-button>
+        <audio src="audio/tryme-final.m4a" type="audio/mpeg" id="myAudio" preload="auto">
+          Your browser does not support the audio element.
+        </audio>
+        </sl-tooltip>
+      </div>
+    </header>
+    <!-- TOP navigation bar -->
+    <nav>
+      <div class="nav_menu" id="nav-menu">
+        <img
+          class="logo"
+          id="home"
+          src="images/logo-clear-heads-2.png"
+          alt="Clear Heads logo"
+          style="width: 5%"
+        />
+        <i>CLEAR</i>&nbsp; HEADS
+        <a href="menu.html">Menu</a>
+        <a href="#about">About</a>
+        <a href="#library">Library</a>
+      </div>
+    </nav>
+    <main>
+      <!-- Navigate to top of page from W3Scools -->
+      <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+      
+      <!-- HOME SECTION -->
+      <!-- HORIZONTAL sliding image slideshow from W3Schools -->
+      <div
+        class="scroll-container"
+        style="color: #ffffea"
+        > 
+        <!-- tried data-scroll-container from Sticky.js but could not get that to work?? -->
+        <h1 class="heading-home">meditation</h1>
+        <h2>A journey of discovery</h2>
+        <div style="font-size: 50px"></div>
+        <img
+          src="images/image-man-sitting-crossed-legged-outdoors.png"
+          alt="Meditating outdoors"
+          class="responsive"
+          width="1024"
+          height="683"
+        />
+        <img
+          src="images/image-lady-looking-to-sun.png"
+          alt="Meditating looking towards the sun"
+          class="responsive"
+          width="1024"
+          height="683"
+        />
+        <img
+          src="images/image-lady-sitting-at-home-meditating.png"
+          alt="Meditating at home"
+          class="responsive"
+          width="1024"
+          height="683"
+        />
+        <img
+          src="images/image-man-laying-down.png"
+          alt="Laying down meditating"
+          class="responsive"
+          width="1024"
+          height="683"
+        />     
+      </div>
+      <!-- Animated navigation svg down arrow from Codepen -->
+      <svg class="arrow">
+        <path class="a1" d="M0 0 L30 22 L60 0"></path>
+        <path class="a2" d="M0 20 L30 42 L60 20"></path>
+        <path class="a3" d="M0 40 L30 62 L60 40"></path>
+      </svg> 
+      <!-- VERTICAL container-->
+      <!-- WHY SECTION - -->
+      <div class="v-container">
+        <div class="section section-1" id="why">
+          <!-- MoveTo target scroll -->
+          <h1>Why</h1><br>  
+          <h2 style="text-indent: 50px;" class="animate__animated animate__jackInTheBox">learn to meditate</h2>
+          <!-- Content adapted from Headspace 2024, Meditation -->
+           <div class="image-stressed">
+            <img
+              src="images/image-stressed-person-r.png"
+              alt="Meditation can help reduce stress"
+              height="400"
+              width="600"
+              class="img-stressed"
+              title="Meditation can help reduce stress"
+          />
+          </div>
+
+          <!-- Breadcrumbs navbar -->
+          <nav class="breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="#home"><b>Home</b></a></li>
+              <li><a href="#how"><b>How</b></a></li>
+              <li><a href="#when"><b>When&plus;Library</b></a></li>
+              <li><a href="#faqs"><b>FAQs</b></a></li>
+              <li><a href="#resources"><b>Resources</b></a></li>
+              <li><a href="#about"><b>About</b></a></li>
+            </ul>
+          </nav> 
+          <p>
+            Life can be messy and tricky to navigate. While we can't always
+            control the things that happen, we can change how we relate to
+            life&apos;s ups and downs. It is difficult when most of our focus is
+            stolen through an overload of information and digital chatter.
+            That's where meditation can help to keep us in the present and less
+            drawn into our thoughts or reactivity and more about being able to
+            handle challenging times with self-awareness, understanding and a
+            renewed sense of perspective.
+          </p>
+          <p>
+            Meditation gives us space - to breath - to be present and helps us
+            make better choices to develop a little patience and learn be kinder
+            to ourselves and to others around us.
+          </p>
+
+          <!-- Content from Mindful Healthline 2023 & Headspace 2024, Science at Headspace -->
+          <!-- Why section Tab panel from Shoelace -->
+          <div class="tabpanel-topmargin">
+            <sl-tab-group class="tab-content" style="--indicator-color: #EF476F;">
+              <sl-tab slot="nav" panel="tab-1" class="tab-colour">5 reasons to meditate</sl-tab>
+              <sl-tab slot="nav" panel="tab-2" class="tab-colour">The Benefits</sl-tab>
+              <sl-tab slot="nav" panel="tab-3" class="tab-colour">The Science</sl-tab>
+                
+              <sl-tab-panel name="tab-1">
+                <ol type="1" class="add-space">
+                  <li>Lower stress</li>
+                  <li>Improve focus</li>
+                  <li>Reduce brain chatter</li>
+                  <li>Connect better</li>
+                  <li>Improve wellbeing</li>
+                </ol>
+              </sl-tab-panel>
+              <!-- Content adapted from Mayo Clinic, 2024 -->
+              <sl-tab-panel name="tab-2">
+                <ol type="1" class="add-space">
+                  <li>Gives you a new way to look at things that cause stress</li>
+                  <li>Builds skills to manage your stress</li>
+                  <li>Lets you focus on the present</li>
+                  <li>Helps you be more creative</li>
+                  <li>Reduces negative feelings</li>
+                  <li>Helps you be more patient</li>
+                </ol>
+              </sl-tab-panel>
+              <sl-tab-panel name="tab-3">There are a lot studies that show support that meditation works. 
+                Take Aravind Natarajan's 2023 paper on <i>Heart rate variability during mindful breathing meditation</i> 
+                clearly showed that a person's heart rate slowed and rhythm frequency steadied during meditation.  
+                <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                  <a href="https://doi.org/10.3389/fphys.2022.1017350"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+                </sl-tooltip> &nbsp;  
+                For even more visuals check out the statistics on FinancesOnline from credible sources that shows
+                interest in meditation is not just a trend and is on the rise in 2024.   
+                <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                  <a href="https://financesonline.com/meditation-statistics/"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+                </sl-tooltip> 
+              </sl-tab-panel>
+            </sl-tab-group>
+            </div>
+          </div>
+        </div> <!-- Why section end -->
+        <br>
+
+        <!-- Divider from Shoelace -->
+        <sl-divider style="--width: 4px;"></sl-divider><br>
+
+        <!-- HOW SECTION -->
+        <div class="section section-2" id="how">
+          <h1>How</h1><br>
+          <h2 style="text-indent: 50px;" class="animate__animated animate__jackInTheBox">
+          to meditate</h2>
+        
+          <!-- Breadcrumbs navbar -->
+          <nav>
+            <ul class="breadcrumbs">
+            <li><a href="#home"><b>Home</b></a></li>
+            <li><a href="#why"><b>Why</b></a></li>
+            <li><a href="#when"><b>When&plus;Library</b></a></li>
+            <li><a href="#faqs"><b>FAQs</b></a></li>
+            <li><a href="#resources"><b>Resources</b></a></li>
+            <li><a href="#about"><b>About</b></a></li>
+            </ul>
+          </nav>
+          <div class="image-lady-xlegged">
+            <img
+              src="images/image-lady-sitting-cross-legged-r.png"
+              alt="Stressed person"
+              height="400"
+              width="600"
+              class="img-lady-sit-xlegged"
+              title="Lady at home sitting meditating"
+          />
+          </div>
+          <!-- Content adapted from Baptiste 2002, pp 193-194 -->
+          <p>The simplest way to meditate is to find a quiet space where you will not be disturbed for the length of time you have put aside, consider from 1 to 10 minutes.</p>
+          <h3>Timing</h3>
+          <p>If you are being guided, the person will indicate when the session begins and when the time is up by softly speaking to you or using chimes or a low sounding bell. If you are going solo, have a timer ready that is not too intrusive when that goes off or use one on your mobile phone.</p>
+          <h3>Position &amp; other things to consider</h3>
+          <p>Find a comfortable position that you can maintain for the time allocated. The most popular are:</p>
+          
+          <!-- tab panel for position info -->
+           <!-- How section Tab panel from Shoelace -->
+          <div class="tab-panel-size">
+            <sl-tab-group class="tab-content" style="--indicator-color: #EF476F;">
+              <sl-tab slot="nav" panel="tab-1" class="tab-colour">Seated on the floor</sl-tab>
+              <sl-tab slot="nav" panel="tab-2" class="tab-colour">Seated in a chair</sl-tab>
+              <sl-tab slot="nav" panel="tab-3" class="tab-colour">Laying down</sl-tab>
+            
+              <sl-tab-panel name="tab-1">Sit on the floor on the edge of a firm cushion or pillow with legs comfortably crossed or extended out in front <br> or sit up against a wall.</sl-tab-panel>
+              <sl-tab-panel name="tab-2">Sit in a chair with feet flat on the ground or place a cushion under your feet to support your back.</sl-tab-panel>
+              <sl-tab-panel name="tab-3">Lay down on the floor on top of a towel or exercise mat (add a blanket over the top in the cooler months).</sl-tab-panel>
+            </sl-tab-group>
+          </div>
+
+          <h3>Eyes</h3>
+          <p>Your eyes can be closed, use an eye pillow, or leave open is ok too just let your focus be soft like gently gazing at a mundane spot like a wall or the ceiling.</p>
+          <h3>Sensations</h3>
+          <p>Begin being aware of the ground beneath you, notice what areas of the body are touching the floor, towel or mat, try to soften your feet, buttocks, legs, back etc.</p>
+          <h3>Breath</h3>
+          <p>Let your breath be natural, you do not need to force that or change the rhythm, all you need do is become aware of when you breath in and when you breath out, nothing more and nothing less than that.</p>
+          <h3>Thoughts</h3>
+          <p>Let your thoughts pop into your head, and then let those go, do that again, and again and again…</p>
+          <p>That&nbsp;s it!</p>
+          <br>
+          <h3>Types of meditation</h3>
+          <p>There are many different types of meditations to explore:</p>
+          
+          <!-- How section tab panel from Shoelace-->
+          <div class="tab-panel-size2">
+            <sl-tab-group class="tab-content" style="--indicator-color: #EF476F;">
+              <sl-tab slot="nav" panel="tab-1" class="tab-colour">Guided &amp; unguided</sl-tab>
+              <sl-tab slot="nav" panel="tab-2" class="tab-colour">Breath work</sl-tab>
+              <sl-tab slot="nav" panel="tab-3" class="tab-colour">Body scan</sl-tab>
+              <sl-tab slot="nav" panel="tab-4" class="tab-colour">Visualisation</sl-tab>
+              <sl-tab slot="nav" panel="tab-5" class="tab-colour">Everyday things</sl-tab>
+                    
+              <sl-tab-panel name="tab-1">There are meditations where someone guides you through a meditation
+              or you can practice on your own. The one that best suits is different for everyone, some people
+              may prefer to stick with one while others like a variety, the best part is you decide
+              what feels right for you.</sl-tab-panel>
+              <sl-tab-panel name="tab-2">There are many ways to work with your breath that can help create a calm 
+              feeling and allow you to be present, because when you consciously think about your breath you are in 
+              the now moment.</sl-tab-panel>
+              <sl-tab-panel name="tab-3">Scanning the body is a great way to understand how much tension you may be 
+              holding on to. When stressed, anxious or feeling pain, your muscle holds that as a memory, to release 
+              while guided (or unguided) you can become more aware and learn that it is ok to release and reconnect 
+              with your body.</sl-tab-panel>
+              <sl-tab-panel name="tab-4">Most often a guided practice, involving a journey to a place or space of the 
+              person&apos;s choosing, like their favourite place to unwind or feel calm, like the beach, or at the 
+              top of a mountain.</sl-tab-panel>
+              <sl-tab-panel name="tab-5">This takes many by surprise, but learning to do everyday things mindfully 
+              with intent is a form of meditation, like eating slowly, eating and walking slowly.</sl-tab-panel>
+            </sl-tab-group>
+          </div>
+        </div><br>
+              
+        
+        <!-- Divider from Shoelace -->
+        <sl-divider style="--width: 4px;"></sl-divider>
+        
+        <!-- WHEN SECTION -->
+        <div class="section section-3" id="when">
+          <h1>When</h1><br>
+          <h2 style="text-indent: 50px;" class="animate__animated animate__jackInTheBox">to meditate</h2>
+         
+          <!-- Breadcrumbs navbar -->
+          <nav class="breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="#home"><b>Home</b></a></li>
+              <li><a href="#why"><b>Why</b></a></li>
+              <li><a href="#how"><b>How</b></a></li>
+              <li><a href="#faqs"><b>FAQs</b></a></li>
+              <li><a href="#resources"><b>Resources</b></a></li>
+              <li><a href="#about"><b>About</b></a></li>
+            </ul>
+          </nav>
+          
+          <!-- Content adapted from Healthline 2024 & SunSmart app & Baptiste 2022, p 201-->
+          <!-- Tooltips from Shoelace-->
+          <div class="add-space">
+            <p>Any time is good to meditate, whether that's in the morning, after exercise or before bed. 
+            Think of meditation as a way for you to reset for the day ahead or as a wind down before sleep.</p>
+            <p>The library provides a sample of audio recordings, you&apos;'ll learn meditation is not at about sitting for hours 
+            in awkward positions!</p>
+            <p>Start with a short time like a minute and work up to 10 or 15 minutes if and when you are ready.</p>
+            <p>Sometimes meditating will feel easy and you'll wonder where the time went, other sessions will feel hard,
+            really that is meditation, it is about being in the moment, letting things be and going with whatever comes up.</p>
+            <br>
+          </div>
+          <!-- AUDIO LIBRARY -->
+          <h2 style="text-indent: 50px;" id="library">Library</h2>
+          <p>Here's a collection of guided audio meditation practices conveniently placed on YouTube.</p>
+
+          <!-- library collapsible sections -->
+          <div>
+            <button type="button" class="collapsible"><b>&nbsp;Start of your day, before or after exercise</b></button>
+            <div class="content">
+              <!-- External links to Healthline -->
+              <h3><b>Sunshine &nbsp; 01:47</b></h3>
+              <p>Enjoy some sunshine to boost your mood and maintain vitamin D levels for healthy bones, learn more at Heathline&nbsp;
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                  <a href="https://www.healthline.com/health/food-nutrition/benefits-vitamin-d"><sl-icon name="box-arrow-up-right" title="Go to external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+                </sl-tooltip><br> First is to be sun smart, if you're not sure the best time, checkout the UV rating based your location using the Cancer Council's SunSmart app.&nbsp; 
+                <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                  <a href="https://cancer.org.au/cancer-information/causes-and-prevention/sun-safety/be-sunsmart/sunsmart-app"><sl-icon name="box-arrow-up-right" title="Go to external site" class="icon-external" style="font-size: 20px;"></sl-icon></a> <br>
+              </sl-tooltip><br>
+              <!-- Combined audio with image using Movie Maker and uploaded files to YouTube -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/PXacVq9M7qQ?si=ZivjktXT1mzRKSUa" title="Lady gazing toward the sun" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <br>
+              <h3><b>Reset & Go &nbsp; 02:04</b></h3>
+              <p>A good practice for before or after exercise.</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/0p5HE3KVuW8?si=H9jclAtYh15ZQ5gZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <br><br>
+            </div>
+
+            <div>
+              <button type="button" class="collapsible"><b>&nbsp;For when you're after a boost or are wired and need to wind down</b></button>
+              <div class="content">
+                <h3><b>A pep me up &nbsp; 01:01</b></h3>
+                <p>Three-part breathing is great way to massage your lungs and increase oxygen in the blood.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3nVaoA9Rx7U?si=ecce-FXkiJsKDcnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br>
+          
+                <h3><b>Clear your head &nbsp; 01:14</b></h3>
+                <p>Need to concentrate fast, give alternate nostril breathing a go, to clear your mind and improve focus.</p>
+                <p>To start you'll need to form a soft fist with your right hand then open out the thumb and the last two fingers.</p>
+                <p>Bring your hand to your face and begin the video</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g3Y5_1VegU4?si=hnVOFH7Bu-BMSwIN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br>
+            
+                <h3><b>Walking it &nbsp; 01:35</b></h3><p>01:35</p>
+                <p>An outdoor or indoor walking meditation.<br> 
+                This practice is best done barefoot or with socks on (when the weather is cooler), but you can also do this when outside with your trusty hiking boots on.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DzNnez0DE3Q?si=JHBryXS4aGiypaYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br>
+              </div>
+              
+              <button type="button" class="collapsible"><b>&nbsp;For when it is time for sleep</b></button>
+              <div class="content">
+                <h3><b>Time out &nbsp; 01:20</b></h3>
+                <p>Sleep can be elusive, consider this practice before bed to gain more zzzz&apos;s</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pBEUgzMmgl0?si=pT5KM0gRkh5JiLoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br>
+                <h3>Candle gazing &nbsp; 01:22</h3>
+                <p>A good practice for the end of the day just before bed that can help stimulate the pineal gland and active 
+                melatonin secretion that helps reduce tension as can bring on the onset of sleepiness.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GnMQqvdom1o?si=uwxwph_9FFUoxdLN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider from Shoelace -->
+        <sl-divider style="--width: 4px;"></sl-divider>
+
+        <!-- FAQs SECTION -->
+        <!-- Content adapted from Headspace 2024, Meditation & Baptiste 2002 -->
+        <div class="section section-4" id="faqs">
+          <h1>FAQ<span style="font-size: 4rem;">s</span></h1><br>
+          <h2 style="text-indent: 50px;">Here's some frequently asked questions</h2>
+          <!-- Breadcrumbs navbar -->
+          <nav class="breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="#home"><b>Home</b></a></li>
+              <li><a href="#why"><b>Why</b></a></li>
+              <li><a href="#how"><b>How</b></a></li>
+              <li><a href="#when"><b>When&plus;Library</b></a></li>
+              <li><a href="#resources"><b>Resources</b></a></li>
+              <li><a href="#about"><b>About</b></a></li>
+            </ul>
+          </nav>
+          <div>
+            <!-- Some of the most FAQs I was asked when I ran a yoga business for 9 years (now closed due to covid)-->
+            <button type="button" class="collapsible"><b>&nbsp;How do I stay up right when seated?</b></button>
+            <div class="content">
+              <p>The idea when sitting is to keep the back straight inline with your hips and to not hold onto your back muscles, 
+              this can be easy for some and others will find the back aches, the more you regularly meditate the less you will tense up. Until that time, keep working with the sensations each session to discover what part of your back (top, middle, lower back, left side or right) or perhaps the hips (one side or both) you are holding on to and each time try to soften each spot more and more while each time trying to keep stay seated up right. The use of a wall can help with an addition of another pillow or cushion wedge behind the lower back to help if that area is prone to collapsing.</p>
+            </div>
+            <div>
+            <button type="button" class="collapsible"><b>&nbsp;I can&apos;t meditate, I fidget too much!</b></button>
+            <div class="content">
+              <p>Sensations and fidgeting and that overwhelming desire to move are normal and part of the practice and those will come up often when first starting to practice meditating or even whether you have been doing that for years. At first, you may find you can barely stay being quiet or still for long, but if you keep coming back to your mat or seated position and practice, you can work up to a time that works best for you. </p>
+            </div>
+            <button type="button" class="collapsible"><b>&nbsp;My mind wanders too much to meditate!</b></button>
+            <div class="content">
+              <p>It is evitable as soon as we stop and try to be quiet and still, our minds wander, this is natural but even more so when we live in a time when our focus is constantly being stolen by technology and the desire to know what others are doing or saying. Meditation is allowing your thoughts to come up, all you need to realise is that meditation is not about, not thinking, as that is really hard to do, it is more about bringing space between your thoughts. Like a pause, that is where the reset can come in.</p>
+            </div>
+            <button type="button" class="collapsible"><b>&nbsp;I don&apos;t think meditating is for me</b></button>
+            <div class="content">
+              <p>Give yourself the time to get there and feel comfortable meditating and learn what works for you, there is so much information around that talks about the ideal amount of time to meditate, lets throw that idea out now, as it is a very individual thing!</p>
+            </div>
+            <button type="button" class="collapsible"><b>&nbsp;I can't stop thinking!</b></button>
+            <div class="content">
+              <p>This is the good part, let your thoughts come up, the idea is to allow those to pop into your head and then out of your mind again. When you realise your mind has wandered into a story, just notice that, then with intention let that thought go, you can reconsider that later, let this time be yours. You may need to do that again, again and again, that is meditation, letting your thoughts in and the letting them go. Sounds simple, but it can also be hard. Over time like anything in life that you have learnt that took time to grasp, to understand and discover that is what meditation teaches us that we can still grow, expand and discover stuff about ourselves and learning to be ok in our inner space, when you shift to that mindset that is it.</p>
+            </div>
+            <button type="button" class="collapsible"><b>&nbsp;But I don&apos;t have time to meditate?</b></button>
+            <div class="content">
+              <p>Let's be real, please take the time to make yourself a priority. YOU are important. This is not about being selfish, but more about taking care of yourself and by doing that you may find you are better equipped to look out for others more without losing yourself.</p>
+            </div>
+            <button type="button" class="collapsible"><b>&nbsp;So how long is enough?</b></button>
+            <div class="content">
+              <p>The best way is to begin slowly, with small timeslots whether once a day for a minute or two in the morning or before bed. You may find just once a day is enough like 1 minute or 10 in the morning is all you need, whichever works for you, there is no magic formula, it is totally up to you. Oh, and don&apos;t forget if you take a break for a day or over the weekend, that&apos;s ok too, there are no hard and fast rules, the magic happens when you find a regular timeslot that works for you, but go with what is ok for you.</p>
+            </div>
+            </div> <!-- keep this div as forms part of this collapsible set -->
+          </div>
+        </div>  
+
+        <!-- Divider from Shoelace -->
+        <sl-divider style="--width: 4px;"></sl-divider>
+        <br><br>
+
+        <!-- RESOURCES SECTION -->
+        <div class="section section-5" id="resources" >
+          <h1>Resources</h1><br>
+          <h2 style="text-indent: 50px;">some great apps, books, videos and websites</h2>
+          <br>
+          <!-- Breadcrumbs navbar -->
+          <nav class="breadcrumb"> 
+            <ul class="breadcrumbs">
+              <li><a href="#home"><b>Home</b></a></li>
+              <li><a href="#why"><b>Why</b></a></li>
+              <li><a href="#how"><b>How</b></a></li>
+              <li><a href="#when"><b>When&plus;Library</b></a></li>
+              <li><a href="#faqs"><b>FAQs</b></a></li>
+              <li><a href="#about"><b>About</b></a></li>
+            </ul>
+          </nav>
+          <br>
+          <p><b>Apps</b></p>
+          <ul class="add-space">
+            <li>Headspace Inc, Headspace&nbsp;-&nbsp;Sleep and Meditation app 
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                <a href="https://www.headspace.com"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" title="Go to external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+              </sl-tooltip>
+            </li>
+            <li>SunSmart Global UV app&nbsp;
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                <a href="https://www.cancer.org.au/cancer-information/causes-and-prevention/sun-safety/be-sunsmart/sunsmart-app"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+              </sl-tooltip>
+            </li>
+          </ul>
+          <div class="image-man-w-computer">
+            <img
+              src="images/image-man-sitting-r.png"
+              alt="Man sitting with computer"
+              height="400"
+              width="600"
+              class="img-man-w-comp"
+              title="Meditation enthusiast looking up Clear Heads content"
+          />
+          </div>
+          <p><b>Books</b></p>
+          <ul class="add-space">
+            <li>Baron Baptiste, Journey into Power, 2002, Thorsons, Hammersmith, London</li>
+            <li>Johann Hari, Stolen Focus: Why You Can&apos;t Pay Attention. 2023, Bloomsbury Publishing</li>
+            <li>Richard Rosen, The Yoga of Breath: A Step-by-Step guide to Pranayama, 2002, Boston, Massachusetts</li>
+          </ul>
+          <p><b>YouTube</b></p>
+          <ul class="add-space">
+            <li>Stolen focus with Johann Hari, 59:45s&nbsp;
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                <a href="https://www.youtube.com/watch?v=BcnQh8aKYd4"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+              </sl-tooltip>
+            </li>
+          </ul>
+          <p><b>Websites</b></p>
+          <ul class="add-space">
+            <li>Headspace, Meditation, 2024&nbsp;
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                <a href="https://www.headspace.com/meditation/meditation-101"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+              </sl-tooltip>
+            </li>
+            <li>Tara Brach, Ph.D, Guided Meditations, 2023&nbsp;
+              <sl-tooltip content="Go to external site" placement="right-start" class="tooltip-hoist">
+                <a href="https://www.tarabrach.com/guided-meditations/?cn-reloaded=1"><sl-icon name="box-arrow-up-right" label="Icon to go to an external site" class="icon-external" style="font-size: 20px;"></sl-icon></a>
+              </sl-tooltip>
+            </li>
+          </ul>
+        </div> <!-- Resources section end -->
+        
+        <!-- Divider from Shoelace -->
+        <sl-divider style="--width: 4px;"></sl-divider>
+        
+        <!-- ABOUT SECTION-->
+        <div class="section section-6" id="about"><h1>About</h1><br><br><br>
+          <h1 style="text-indent: 50px;"><i>CLEAR</i> HEADS</h1>
+          <br><br>
+          <!-- Breadcrumbs navbar -->
+          <nav class="breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="#home"><b>Home</b></a></li>
+              <li><a href="#why"><b>Why</b></a></li>
+              <li><a href="#how"><b>How</b></a></li>
+              <li><a href="#when"><b>When&plus;Library</b></a></li>
+              <li><a href="#faqs"><b>FAQs</b></a></li>
+              <li><a href="#resources"><b>Resources</b></a></li>
+            </ul>
+          </nav> 
+          <div class="clients">
+            <img src="images/image-client4.png" alt="Sean Gray, Psychiatrist, 11 years" title="Sean Gray, Psychiatrist, 11 years, meditator 6 years" class="client" height="400" width="146">
+            <img src="images/image-client2.png" alt="Joyce Sellers, Clinical Psychologist, 10 years" title="Joyce Sellers, Clinical Psychologist, 10 years, meditator 8 years" class="client" height="370" width="135">
+            <img src="images/image-client3.png" alt="Mary Dellos, General Practitioner, 9 years" title="Mary Dellos, General Practitioner, 9 years, meditator 5 years" class="client" height="370" width="135">
+            <img src="images/image-client1.png" alt="Barry Clements, Counsellor, 11 years" title="Barry Clements, Counsellor, 11 years, meditator 7 years" class="client" height="400" width="146">
+          </div>
+          <br>
+          <p>We offer a warm and inviting place to explore and empower people to recognise meditation as part of everyday self-care.</p>
+          <p>Our aim is to provide a fully self-serve interactive space for people to begin meditating right away but also to learn the benefits, the science stuff and discover different practice options are offered.</p> 
+          <p>The site is for newcomers to find out how to start a meditation journey and wellbeing enthusiasts looking for a variety of options or those returning to discover new content with the regular updates.</p>
+          <div class="assist-info">
+            <p><b>Did you know meditation can assist with:</b></p>
+            <ul>
+              <li>Anxiety conditions</li>
+              <li>Better focus and concentration</li>
+              <li>Emotional wellbeing</li>
+              <li>Pain management</li>
+            </ul>
+          </div>
+          <div class="about-cred">
+            <p><b>Credentials</b></p>
+              <ul>
+                <li>MBSR (Mindfulness Based Stress Reduction) certified</li>
+                <li>iRest&reg; Meditation certified</li>
+              </ul>
+            <p><b>Experience</b></p>
+            <p>Between us we have over 40 years of experience in the health and wellbeing industry! 
+            We all are meditators and use different practice styles for ourselves and clients.</p>
+            <p>A big thank you to Mary, she has been working hard recording and sharing her unique guided meditations,
+            those can now be found uploaded in the library.</p>
+          </div>
+        </div> <!-- About section end -->
+      </div> <!-- Vertical container end-->
+    </main>
+    
+    <footer>
+      <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <!-- Drawer component 1 from Shoelace -->
+        <sl-drawer label="Terms and Conditions" placement="bottom" class="drawer-scrolling" style="text-align: center; text-align: justify;">
+          <div style="height: 150vh; border: dashed 2px var(--sl-color-neutral-200); padding: 0 1rem;">
+            <p class="text1">Medical Disclaimer<br>
+            The content and media on the <i>Clear</i> Heads website are created and published online for informational purposes only. It is not intended to be a substitute for professional medical advice and should not be relied on as health or personal advice.
+            Always seek the guidance of your doctor or other qualified health professional with any questions you may have regarding your health or a medical condition. Never disregard the advice of a medical professional, or delay in seeking it because of something you have read on this website.
+            If you think you may have a medical emergency, call your doctor, go to the nearest hospital emergency department, or call the emergency services immediately. If you choose to rely on any information provided by Clear Heads, you do so solely at your own risk.
+            External (outbound) links to other websites or educational material (e.g. books, apps…) that are not explicitly created by Clear Heads are followed at your own risk. Under no circumstances is Clear Heads responsible for the claims of third-party websites or educational providers.
+            If you wish to seek clarification on the above matters, please get in touch with <i>Clear</i> Heads.
+            </p>
+            <p class="text1">Use License<br>
+            Permission is granted to download materials (information or software) on <i>Clear</i> Heads website for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
+            modify or copy the materials;<br>
+            use the materials for any commercial purpose, or for any public display (commercial or non-commercial);<br>
+            attempt to decompile or reverse engineer any software contained on <i>Clear</i> Head&apos;'s website;<br>
+            remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or “mirror” the materials on any other server.
+            </p>
+            <p class="text1">
+            Materials Disclaimer<br>
+            The materials on <i>Clear</i> Head&apos;s website are provided on an &apos;as is&apos; basis. <i>Clear</i> Head makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+            Further, Clear Head does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+            </p>
+            <p class="text1">
+            Limitations<br>
+            In no event shall Clear Heads or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on <i>Clear</i> Head&apos;s website, even if <i>Clear</i> Heads or a <i>Clear</i> Heads authorised representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+            </p>
+            <p class="text1">
+            Accuracy of materials<br>
+            The materials appearing on Clear Heads website could include technical, typographical, or photographic errors. Clear Heads does not warrant that any of the materials on its website are accurate, complete or current. Clear Heads may make changes to the materials contained on its website at any time without notice. However <i>Clear</i> Heads is not able to make any commitment when materials are updated.
+            </p>
+            <p class="text1">
+            Links<br>
+            <i>Clear</i> Heads has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Clear Heads of the site. Use of any such linked website is at the user&apos;s own risk.
+            </p>
+            <p class="text1">
+            Modifications<br>
+            <i>Clear</i> Heads may revise these terms and conditions for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms and conditions.
+            </p>
+          </div>
+          <sl-button slot="footer" variant="primary">Close</sl-button>
+        </sl-drawer>
+        <a href="#tcs">T&Cs</a>
+
+        <!-- Support link Drawer component 2 from Shoelace -->
+        <sl-drawer label="Support" placement="bottom" class="drawer-placement-bottom2" style="text-align: center;">
+          <p class="text2">Beyond Blue&nbsp;-&nbsp;for anyone feeling depressed or anxious, call 1300 224 636 or chat online</p>
+          <p class="text2">Lifeline&nbsp;-&nbsp;for anyone having a personal crisis, call 13 11 14 or chat online.</p>
+          <sl-button slot="footer" variant="primary" class="pink">Close</sl-button>
+        </sl-drawer>
+        <a href="#support">Support</a>
+
+        <!-- Contact link Drawer component 3 from Shoelace -->
+        <sl-drawer label="Contact Us" placement="bottom" class="drawer-placement-bottom3" style="text-align: left;">
+          <p class="text3">You can reach us by:</p><br>
+          <p class="text3">Phone: 08 9409 6960</p>
+          <p class="text3">Email: hello@clearheads.com.au</p>
+          <sl-button slot="footer" variant="primary" class="pink">Close</sl-button>
+        </sl-drawer>
+        <a href="#contact">Contact Us</a>
+        
+        <!-- Socials link Dialog box from Shoelace -->
+        <sl-dialog label="Socials" class="dialog-socials" id="socials-d">
+          We've done something different and skipped the socials to let you focus on YOU! 
+          <sl-button slot="footer" variant="primary">Close</sl-button>
+        </sl-dialog>  
+        <a href="#socials">Socials</a>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/button/button.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/drawer/drawer.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/divider/divider.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/tab-panel/tab-panel.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/dialog/dialog.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

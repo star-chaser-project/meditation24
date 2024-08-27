@@ -1,0 +1,678 @@
+* { 
+ box-sizing: border-box;
+}
+
+/* Colour palette contrast checked with Coolers
+#073B4C - Deep green (background)
+#E2F5F5 - Off white (text)
+#EF476F - Bright Pink (Crayola) (accent)
+#00CECB - Emerald (green) 
+#118AB2 - Blue (NCS) (main heading)
+#FFFFEA - Ivory (hover highlight)
+*/
+
+/* Adobe Font
+font-family: "canvas-inline", sans-serif;
+font-weight: 500, 700;
+font-style: normal;
+*/
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  background: #073B4C;
+}
+
+header {
+  background-color: #ef476f; 
+  padding: 5px;
+  text-align: center;
+}
+
+.main {
+  margin-top: 30px
+}
+
+h1 {
+  font-family: "canvas-inline", sans-serif;
+  font-size: 8em;
+  color: #073B4C;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 10%;
+}
+
+h2 {
+  font-family: "canvas-inline", sans-serif;
+  font-size: 3em;
+  color:#073B4C;
+  font-weight: 300;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+h3, h4, ol, ul, li {
+  color: #E2F5F5;
+}
+
+.section h1 {
+  color: #E2F5F5;
+}
+
+.section h2 {
+  color: #E2F5F5;
+}
+
+p {
+  text-wrap: normal;
+  color: #E2F5F5;
+  line-height: 1.5rem;
+ }
+
+
+/* MAIN HEADING text position in slideshow */
+.scroll-container h1 {
+  position: absolute;
+  top: 30%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  text-shadow:
+    1px 2px 1px #b2a98f,
+    1px 4px 3px rgba(0,0,0,0.15),
+    1px 8px 1px rgba(0,0,0,0.1);
+}
+
+.scroll-container h2 {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  text-shadow:
+    1px 2px 1px #b2a98f,
+    1px 4px 3px rgba(0,0,0,0.15),
+    1px 8px 1px rgba(0,0,0,0.1);
+}
+
+/* --- NAVIGATION --- */
+/* TOP navigation menu adapted from W3Schools */
+#nav-menu {
+  overflow: hidden;
+  background-color: #06D6A0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#nav-menu a {
+  float: right;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#nav-menu a:hover {
+  background-color: #FFFFEA;
+  color: #073B4C;
+  font-size: 1rem;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* SVG down arrow navigation icon from Codepen */
+/* set arrow positioning */
+.arrow {
+  float: none;
+	width: 60px;
+	height: 82px;
+	position: relative;
+	left: 49%;
+	bottom: 20%;
+  z-index:999;
+}
+/* set arrow styles */
+.arrow path {
+	stroke: #EF476F;
+	stroke-width: 2px;
+	fill: transparent;	
+	animation: down 2s infinite;
+}
+/* arrow keyframe animation */
+@keyframes down{
+0% { opacity:0 }
+25% { opacity:1 }
+75% { opacity:0 }
+100% { opacity:0 }
+}
+/* arrow animation delay */
+.arrow path.a1{	animation-delay:-1s; }
+.arrow path.a2{	animation-delay:-.5s; }
+.arrow path.a3{	animation-delay:0s; }
+
+
+/* Navigate icon to external site from Shoelace */
+.icon-external {
+  color: #E2F5F5;
+}
+
+.icon-external:hover {
+  font-weight: 500;
+  text-decoration: none;
+  color: #EF476F;
+}
+
+/* Navigate to top of page button from W3Schools */
+#top {
+  display: none; 
+  position: fixed;
+  bottom: 65px; 
+  right: 40px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #EF476F; 
+  color:#000; 
+  cursor: pointer; 
+  padding: 15px;
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#top:hover {
+  background-color: #FFFFEA;
+}
+
+
+/* --- FOOTER ----- */
+/* Navigation bar and make it stick adapted from W3Schools */
+.navbar {
+  background-color: #06D6A0;
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  font-weight: 500;
+}
+
+/* Links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #073B4C;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+/* Colour links on hover */
+.navbar a:hover {
+  background-color: #FFFFEA;
+  color: black;
+  font-weight: 500;
+}
+/* Colour active/current link */
+.navbar a.active {
+  background-color: #EF476F;
+  color: #000;
+}
+
+
+/* Breadcrumbs menu */
+ul.breadcrumbs {
+  list-style: none;
+  display: flex;
+  text-align: left;
+}
+
+ul.breadcrumbs li {
+  display: inline;
+  color: #E2F5F5;
+}
+
+ul.breadcrumbs li+li:before {
+  content: ">";
+  padding: 10px;
+}
+
+ul.breadcrumbs li a {
+  color: #E2F5F5;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumbs li a:hover {
+  /*color: #EF476F;*/
+  text-decoration: underline;
+}
+
+ul.breadcrumbs a.active {
+  text-decoration: none;
+}
+
+/* AUDIO - Try me */
+.audio-tryme {
+  float: right;
+}
+
+#audiotryme.button:hover {
+  cursor: pointer;
+  background: #053056;
+}
+
+/* TOOLTIP on Tryme audio from Shoelace */
+.sl-button a:hover {
+  background-color: #00CECB;
+  color: #fff;
+}
+
+.sl-button a:active {
+  background-color: #FF5E5B;
+  color: #00CECB;
+}
+
+.play-button a:hover {
+  background-color: #00CECB;
+  color: #fff;
+}
+
+.play-button a:active {
+  background-color: #FF5E5B;
+  color: #00CECB;
+}
+
+/* CLEAR HEADS LOGO */
+.logo {
+  position: center;
+  vertical-align: middle;
+}
+
+/* --- MENU PAGE --- */
+/* Site map page */
+.menu-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: #fff;
+}
+
+/* Menu site map heading position over page image */
+.centered {
+  position: absolute;
+  top: 8px;
+  left: 200px;
+  font-family: "canvas-inline", sans-serif;
+}
+
+.heading-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "canvas-inline", sans-serif;
+  text-transform: uppercase;
+  font-size: 8em;
+}
+
+/* Menu full page image */
+.menu-pic {
+  background-image: url("images/image-rocks-white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Sitemap menu list */
+.sitemap-menu {
+  display: flex;
+  flex-direction: column;
+  line-height: 1em;
+  margin: auto;
+  padding: 1rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  font-size: 2em;
+  color: #000;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Style Menu list links */
+.sitemap-menu, ul {
+  text-decoration: none;
+}
+
+.sitemap-menu, ul a:link {
+  text-decoration: none;
+  color: #118AB2;
+}
+
+.sitemap-menu, ul a:visited {
+  text-decoration: none;
+  columns: #073B4C;
+}
+
+.sitemap-menu, ul a:hover {
+  text-decoration: none;
+  color: #118AB2;
+}
+
+.sitemap-menu, ul a:active {
+  text-decoration: none;
+} 
+
+.sitemap-menu, li {
+  margin: 10px 0;
+}
+
+/* SLIDESHOW SECTION */
+/* Scrollable image gallery from W3Schools */
+div.scroll-container {
+  background-color: #073B4C;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 4px;
+  overflow-x: auto;
+  min-width: auto;
+  max-height: auto;
+}
+div.scroll-container img {
+  padding: 10px;
+}
+/* Responsive images in slideshow */
+.responsive {
+  min-width: auto;
+  height: auto;
+}
+
+
+/* VERTICAL SECTIONS */
+/* Vertical scrolling container adapted from Geeks4Geeks */
+.v-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  min-height: auto;
+  max-width: auto;
+}
+/* sections of scrollable container */
+.section {
+  color: #E2F5F5;
+  text-align: left;
+  scroll-snap-align: start;
+  overflow-wrap: break-word;
+  display: inline-block;
+  padding: 80px;
+  overflow-x: hidden;
+  background: #073B4C;
+}
+
+.section-1 .image-stressed {
+  float: right;
+  margin: 0 20px;
+}
+
+.section-section-1 {
+  overflow-y: hidden;
+}
+
+.section-1 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-2 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-2 .img-lady-sit-xlegged {
+  float: right;
+}
+
+.section-3 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-4 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-5 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-5 .img-man-w-comp {
+  float: right;
+  margin: 0 5px;
+}
+
+.section-6 h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.section-1 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.section-2 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.section-3 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.section-4 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.section-5 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.section-6 h2 {
+  margin: 0px;
+  line-height: 100px;
+}
+
+
+/* WHY section */
+/* H2 heading animation using Animate.css */
+.animate__animated.animate__jackInTheBox {
+  --animate-duration: 4s;
+  animation-fill-mode: none;
+  animation-delay: 1s;
+}
+
+/* --- HOW section --- */
+/* Tab panel from Shoelace */
+.tab-content {
+  color: #E2F5F5;
+}
+
+.tab-panel-size {
+  width: 80%;
+  margin-left: 30px;
+}
+
+.tab-panel-size2 {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.sl-tab-group {
+  --indicator-color: #E2F5F5;
+  --sl-font-size-large: 1.25rem;
+  --sl-font-weight-bold: 700;
+}
+
+/* Tab panel font colours */
+.sl-tab::part(base) {
+  font-size: 18px;
+}
+
+.tab-colour::part(base) {
+  background: var(--sl-color-white-0);
+  color: #E2F5F5;
+  font-size: 18px;
+  font-weight: 700;
+  Font-family: Verdana, Arial, sans-serif;
+}
+
+.tab-colour::part(base):hover {
+  color: #06D6A0;
+}
+
+
+/* --- AUDIO library & FAQs section --- */
+/* Collapsible buttons */
+/* Style button to open/close collapsible content from W3Schools */
+.collapsible {
+  background-color: #eee;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+/* Background color to the button */
+.active, .collapsible:hover {
+  background-color: #EF476F;
+}
+
+/* Collapsible content hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #073B4C;
+}
+
+/* Add icon to collapsible bar */
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 12px;
+  color: white;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* RESOURCES section */
+/* Tooltip from Shoelace & hoist is to stop tooltip being clipped */
+.tooltip-hoist {
+  position: relative;
+  border: solid 2px var(--sl-panel-border-color);
+  overflow: hidden;
+  padding: var(--sl-spacing-medium);
+}
+
+/* Add space between listed rows */
+.add-space {
+  line-height: 1.5rem;
+}
+
+
+/* --- ABOUT section --- */
+/* Client images */
+.client {
+  vertical-align: baseline;
+  float: right;
+  margin: 0px;
+}
+
+
+/* FOOTER section*/
+/* Drawer component from Shoelace text styling */
+.text1 {
+  color: #073B4C;
+}
+
+.text2 {
+  color: #073B4C;
+}
+
+.text3 {
+  color: #073B4C;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Accessibility/Usability to Reduce motion from Animate.css */
+@media (prefers-reduced-motion) {
+  /* adjust motion of 'transition' or 'animation' properties */
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+}
+
+/* Tablet devices (portrait) [768-991px] ---*/
+@media screen and (min-width: 768px) and (max-width: 991px){   
+    .column {
+        flex-wrap: wrap;
+    }
+    
+    .img {
+      width: 100%;
+      flex-wrap: wrap;
+  }
+
+  .p {
+      flex-wrap: wrap;
+  }
+}
+
+/* Mobile devices [0-767px] ------*/
+@media screen and (max-width: 767px) {
+    .columns {
+        flex-wrap: wrap;
+    }   
+
+    .img {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .p {
+        flex-wrap: wrap;
+    }
+}  
